@@ -1,0 +1,6 @@
+framework module Pods_Mobiapps_Appli {
+  umbrella header "Pods-Mobiapps Appli-umbrella.h"
+
+  export *
+  module * { export * }
+}
