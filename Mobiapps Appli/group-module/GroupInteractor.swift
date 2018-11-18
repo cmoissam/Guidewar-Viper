@@ -67,7 +67,6 @@ class GroupInteractor: PresenterToInteractorProtocol{
             
             let managedContext = self.appDelegate?.persistentContainer.viewContext
             let categoryFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Categories")
-            
             let categories = try! managedContext?.fetch(categoryFetch) as! [Categories]
             var categoriesArray = Array<CategoryModel>()
 

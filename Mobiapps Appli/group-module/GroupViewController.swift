@@ -87,6 +87,7 @@ extension GroupViewController:UITableViewDelegate, UITableViewDataSource{
             
             cell?.textLabel?.text = categoryArrayList[indexPath.row].name
             cell?.detailTextLabel?.text = categoryArrayList[indexPath.row].desc
+            cell?.imageView?.contentMode = .scaleAspectFit
             cell?.imageView?.sd_setImage(with: URL(string: categoryArrayList[indexPath.row].icon!), placeholderImage: UIImage(named: "tenor.gif"))
             
             return cell!
@@ -95,6 +96,8 @@ extension GroupViewController:UITableViewDelegate, UITableViewDataSource{
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             presentor?.showCategoryController(navigationController: navigationController!,category:categoryArrayList[indexPath.row])
+            self.categoriesTable.deselectRow(at: indexPath, animated: true)
+
             
         }
         

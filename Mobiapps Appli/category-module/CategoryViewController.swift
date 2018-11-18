@@ -84,6 +84,7 @@ extension CategoryViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         presentor?.showAchievementController(navigationController: navigationController!, achievement: achievementArrayList[indexPath.row])
+        self.achievementsTable.deselectRow(at: indexPath, animated: true)
         
 }
 

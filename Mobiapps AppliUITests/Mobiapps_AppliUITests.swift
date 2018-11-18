@@ -30,15 +30,15 @@ class Mobiapps_AppliUITests: XCTestCase {
         app.launch()
         
         // Assert that we are displaying the tableview
-        let articleTableView = app.tables["categories"]
+        let categoryTableView = app.tables["categories"]
         
-        XCTAssertTrue(articleTableView.exists, "The article tableview exists")
+        XCTAssertTrue(categoryTableView.exists, "The article tableview exists")
         
         app.tables["categories"].cells.allElementsBoundByIndex.first?.tap()
         
         XCUIApplication().navigationBars["Achievements"].buttons["Categories"].tap()
         
-        XCTAssertTrue(articleTableView.exists, "The article tableview exists")
+        XCTAssertTrue(categoryTableView.exists, "The article tableview exists")
     
     }
     
